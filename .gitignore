@@ -1,0 +1,5 @@
+node_modules/
+php/
+.php
+.vs
+.log

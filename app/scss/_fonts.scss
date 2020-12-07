@@ -1,0 +1,60 @@
+@mixin font($name, $style, $weight, $url) {
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url($url) format('woff2');
+  }
+}
+
+@include font('Gilroy', normal, 300, '../webfonts/Gilroy-Light.woff2');
+@include font('Gilroy', normal, 400, '../webfonts/Gilroy-Regular.woff2');
+@include font('Gilroy', normal, 500, '../webfonts/Gilroy-Medium.woff2');
+@include font('Gilroy', normal, 600, '../webfonts/Gilroy-Semibold.woff2');
+@include font('Gilroy', normal, 700, '../webfonts/Gilroy-Bold.woff2');
+@include font('Gilroy', normal, 800, '../webfonts/Gilroy-Extrabold.woff2');
+
+
+@font-face {
+  font-family: 'icomoon';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../webfonts/icomoon.woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+  speak: none;
+  text-transform: none;
+  line-height: 1;
+}
+
+.icon-search::before {
+  content: "\f002";
+}
+.icon-heart::before {
+  content: "\f004";
+}
+.icon-user::before {
+  content: "\f007";
+}
+.icon-close::before {
+  content: "\f00d";
+}
+.icon-left::before {
+  content: "\f053";
+}
+.icon-right::before {
+  content: "\f054";
+}
+.icon-cart::before {
+  content: "\f07a";
+}
+.icon-heart-o::before {
+  content: "\f08a";
+}

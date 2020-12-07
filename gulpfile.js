@@ -31,8 +31,10 @@ gulp.task('style', function() {
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/magnific-popup/dist/magnific-popup.css',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
-    'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'])
-  .pipe(concat('lib.min.css'))
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+    'app/scss/fa/all.min.css'
+    ])
+  .pipe(concat('libs.min.css'))
   .pipe(cssmin())
   .pipe(gulp.dest('dist/css'))
 })
@@ -45,13 +47,13 @@ gulp.task('script', function() {
   .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('lib', function() {
+gulp.task('libs', function() {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js'])
-  .pipe(concat('lib.min.js'))
+  .pipe(concat('libs.min.js'))
   .pipe(gulp.dest('dist/js/'))
 })
 
@@ -62,8 +64,8 @@ gulp.task('html', function() {
 })
 
 gulp.task('fonts', function() {
-  return gulp.src('app/fonts/*')
-  .pipe(gulp.dest('dist/fonts/'))
+  return gulp.src('app/webfonts/*')
+  .pipe(gulp.dest('dist/webfonts/'))
   .pipe(browserSync.reload({stream: true}))
 })
 
@@ -87,7 +89,7 @@ gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'))
   gulp.watch('app/js/main.js', gulp.parallel('script'))
   gulp.watch('app/images/**/*', gulp.parallel('images'))
-  gulp.watch('app/fonts/**/*', gulp.parallel('fonts'))
+  gulp.watch('app/webfonts/**/*', gulp.parallel('fonts'))
 })
 
 gulp.task('build',

@@ -1,6 +1,5 @@
 .header {
   &__top {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -12,11 +11,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 90px;
+    height: 60px;
     transition: all 0.4s;
 
     &.sticky {
+      position: sticky;
       height: 45px;
     }
   }
@@ -100,6 +99,7 @@
   &__btn {
     margin-left: 20px;
   }
+
 }
 
 .header-nav {
@@ -131,6 +131,62 @@
       &::before {
         height: 20px;
       }
+    }
+  }
+}
+
+.categories {
+  &__inner {
+
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__item{
+    padding: 15px 20px 15px 0;
+    position: relative;
+
+    a {
+      white-space: nowrap;
+
+
+    }
+
+    &:hover {
+      >a {
+        font-weight: 600;
+      }
+      > ul {
+        visibility: visible;
+        opacity: 1;
+        height: 200px;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__subnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $peach;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 10px 30px 10px 10px;
+    transition: all .4;
+    overflow: hidden;
+  }
+
+  &__subitem {
+    padding: 10px;
+
+    a:hover {
+      font-weight: 600;
     }
   }
 }

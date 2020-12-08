@@ -1,0 +1,104 @@
+.sales-leaders {
+  padding: 100px 0;
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 270px;
+    margin-bottom: 40px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba($black, .1);
+
+    &:hover {
+     box-shadow: 0 5px 10px rgba($black, .1);
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding: 0 0 90% 0;
+  }
+
+  &__discount {
+    position: relative;
+    text-align: right;
+    z-index: 15;
+    span {
+      font-weight: 600;
+      padding-left: 10px;
+
+    }
+    .sphere {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 54px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 38% 62% 63% 37% / 43% 54% 46% 58%;
+      transition: all .5s;
+      animation: spin 6s linear infinite;
+      background-color: $peach;
+    }
+  }
+
+  &__desc {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $text;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn-buy {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background-color: $light;
+
+
+    &:hover {
+      background-color: $peach;
+    }
+
+    span {
+      margin-left: -10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform:rotate(0deg);
+
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+
+}

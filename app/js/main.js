@@ -6,6 +6,12 @@ $( function() {           //header search-form
   })
 
   window.addEventListener('scroll', function() {
-    $('.header__inner').toggleClass('sticky', window.scrollY > 0)
+    $('.header__top').toggleClass('sticky', window.scrollY > 0)
+  })
+
+  $('.slider__inner').slick({
+    dots: true,
+    arrows: false,
+    autoplay: true
   })
 })

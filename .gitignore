@@ -1,4 +1,6 @@
-node_modules/
+/node_modules
 php/
 .php
 .vs
+npm-debug.log*
+.history

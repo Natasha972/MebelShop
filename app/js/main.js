@@ -14,4 +14,8 @@ $( function() {           //header search-form
     arrows: false,
     autoplay: true
   })
+
+  $('#loadMore').on('click', function() {
+
+  })
 })

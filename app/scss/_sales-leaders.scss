@@ -90,6 +90,37 @@
       margin-right: 10px;
     }
   }
+
+  &__load-more {
+    text-align: center;
+
+    .load-more-btn {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid lighten($text, 20%);
+      line-height: 1.1;
+      outline: none;
+      color: lighten($text, 20%);
+
+      & :first-child {
+        font-size: 40px;
+        line-height: 0.5;
+        font-weight: 300;
+      }
+
+      &:hover {
+        color: $text;
+        border: 1px solid $text;
+      }
+
+    }
+  }
 }
 
 @keyframes spin {

@@ -1,0 +1,65 @@
+.projects {
+  padding: 100px 0;
+
+  &__title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    margin-bottom: 40px;
+    &:hover {
+      color: lighten($text, 20%);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    flex: 0 0 49%;
+  }
+
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 30% 0;
+
+
+    img {
+      transition: all .6s;
+    }
+
+    &:hover {
+      > img {
+        transform: scale(1.1);
+      }
+
+      > .projects__info {
+        height: 80px;
+      }
+    }
+
+
+  }
+
+  &__info {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    transition: all .6s;
+    padding: 20px 40px;
+
+
+  }
+}
